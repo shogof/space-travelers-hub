@@ -1,3 +1,7 @@
-const Rockets = () => <div>This is a div</div>;
+import React from 'react';
+
+function Rockets() {
+  return <p>My Rockets</p>;
+}
 
 export default Rockets;
