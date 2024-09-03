@@ -115,3 +115,103 @@ img {
 .close-button:hover {
   color: rgb(136, 0, 255);
 }
+
+@media (max-width: 768px) {
+  img {
+    width: 70px;
+    height: 80px;
+  }
+
+  .header-container {
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  .logo-container h1 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    padding-top: 90px;
+  }
+
+  .nav-ul.active {
+    display: flex;
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: 65%;
+  }
+  
+  .links {
+    flex-direction: column;  }
+  
+  .navlink {
+    margin-bottom: 8px;
+    border-top: 1px solid white;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .active-link::after {
+    width: 0;
+  }
+
+  .close-button {
+    display: flex;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .header-container {
+    padding: 5px 0;
+    width: 100%;
+  }
+  
+  .logo-container {
+    width: 30%;
+  }
+  
+  .nav-right {
+    position: relative;
+    width: 55%;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .logo-container h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
