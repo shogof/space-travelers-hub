@@ -4,7 +4,7 @@
 
 body {
   color: white;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   padding: 0 5px;
 }
 
@@ -60,7 +60,7 @@ img {
 }
 
 .navlink::after {
-  content: '';
+  content: "";
   transition: all 1s;
   width: 0;
 }
@@ -70,7 +70,7 @@ img {
 }
 
 .active-link::after {
-  content: '';
+  content: "";
   position: absolute;
   border-width: 0 0 1px;
   top: 35px;
@@ -107,7 +107,7 @@ img {
   cursor: pointer;
   padding: 10px;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 10px;
   display: none;
 }
@@ -161,10 +161,11 @@ img {
     display: flex;
     margin-left: 65%;
   }
-  
+
   .links {
-    flex-direction: column;  }
-  
+    flex-direction: column;
+  }
+
   .navlink {
     margin-bottom: 8px;
     border-top: 1px solid white;
@@ -179,7 +180,6 @@ img {
   .close-button {
     display: flex;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -187,27 +187,27 @@ img {
     width: 80px;
     height: 80px;
   }
-  
+
   .header-container {
     padding: 5px 0;
     width: 100%;
   }
-  
+
   .logo-container {
     width: 30%;
   }
-  
+
   .nav-right {
     position: relative;
     width: 55%;
   }
-  
+
   .links {
     display: flex;
     justify-content: space-around;
     width: 100%;
   }
-  
+
   .logo-container h1 {
     font-size: 25px;
     letter-spacing: 2px;
