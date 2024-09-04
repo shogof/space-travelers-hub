@@ -1,20 +1,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// وضعیت اولیه
 const initialState = {
   dragons: [],
   status: 'idle',
   error: null,
 };
 
-// Thunk برای گرفتن داده‌ها از API
 export const fetchDragons = createAsyncThunk('dragons/fetchDragons', async () => {
   const response = await axios.get('https://api.spacexdata.com/v4/dragons');
   return response.data;
 });
 
-// ایجاد slice برای dragons
 const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
