@@ -4,20 +4,16 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/Profile';
 import './styles/App.css';
-import Dragons from './components/Dragons';
-import { NavLink } from 'react-router-dom';
+import Dragon from './components/Dragons';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <nav>
-        <NavLink to="/dragons" activeClassName="active-link">Dragons</NavLink>
-      </nav>
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
-        <Route path="/dragons" element={<Dragons />} />
+        <Route path="/dragon" element={<Dragon />} />
         <Route path="/myprofile" element={<MyProfile />} />
         {/* <Route path="*" element={<NotMatch />} /> */}
       </Routes>
@@ -25,4 +21,4 @@ function App() {
   );
 }
 
-export default App;c
+export default App;
