@@ -29,4 +29,3 @@ function MyProfile() {
 }
 
 export default MyProfile;
-"ira da chatgpt bendaz k baret ba code khodet ayarsh kna"
