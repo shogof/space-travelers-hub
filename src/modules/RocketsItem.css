@@ -1,0 +1,56 @@
+.rocket-content {
+  display: flex;
+  gap: 15px;
+}
+
+.rocket-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.reserve-rocket-btn {
+  width: 150px;
+  padding: 10px;
+  background-color: rgba(3, 138, 255);
+  border-radius: 5px;
+  color: #ffff;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border: none;
+}
+
+.cancel-reserve-btn {
+  width: 200px;
+  padding: 10px;
+  color: gray;
+  background-color: rgba(239, 239, 240);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.rocket-name {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: Roboto, sans-serif;
+}
+
+.rocket-desc {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.reserved {
+  background-color: rgba(0, 181, 204);
+  padding: 5px;
+  color: #ffff;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
