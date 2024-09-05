@@ -25,7 +25,7 @@ function MyProfile() {
         )}
       </ul>
     </div>
-  );
+  )
 }
 
 export default MyProfile;
