@@ -1,41 +1,31 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-const MyProfile = () => {
-  const selectReservedRockets = (state) => state.rockets.rockets.filter((rocket) => rocket.reserved);
-  const selectReservedMissions = (state) => state.missions.reservedMissions.map((missionId) => state.missions.missions.find((mission) => mission.id === missionId));
-
-  const reservedRockets = useSelector(selectReservedRockets);
-  const reservedMissions = useSelector(selectReservedMissions);
+function MyProfile() {
+  const { missions } = useSelector((state) => state.missions);
+  const reservedMissions = missions.filter((mission) => mission.reserved);
 
   return (
-    <div className="profiles">
-      <div className="rockets">
-        <h2>My Rockets</h2>
-        <table className="rocket-table">
-          <tbody>
-            {reservedRockets.map((rocket) => (
-              <tr key={rocket.id}>
-                <td>{rocket.rocket_name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="missions">
-        <h2>My Missions</h2>
-        <table className="rocket-table">
-          <tbody>
-            {reservedMissions.map((mission) => (
-              <tr key={mission.id}>
-                <td>{mission.mission_name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="border-purple-500 border-2 w-2/4 mx-auto p-8 h-auto">
+      <h1 className="text-4xl mb-8 text-center">My Missions</h1>
+      <ul>
+        {reservedMissions.length > 0 ? (
+          reservedMissions.map((mission) => (
+            <li
+              key={mission.id}
+              className="border-fuchsia-500 border-2 w-4/5 mx-auto p-3 my-6"
+            >
+              {mission.mission_name}
+            </li>
+          ))
+        ) : (
+          <li className="text-3xl text-center font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+            No reserved missions
+          </li>
+        )}
+      </ul>
     </div>
   );
-};
+}
 
 export default MyProfile;
