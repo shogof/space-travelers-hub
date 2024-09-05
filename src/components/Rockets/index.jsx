@@ -31,7 +31,7 @@ function Rockets() {
           image={item.image}
           description={item.description}
           reserved={item.reserved}
-          count={index} // Ensure count is passed if needed
+          count={index}
         />
       ))}
     </div>
