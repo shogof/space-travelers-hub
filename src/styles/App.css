@@ -9,3 +9,41 @@ body {
   height: 100vh;
 }
 
+.rocketAnimation {
+  animation-name: rocket;
+  animation-duration: 4s;
+  transform: rotate(-44deg) translate(-139px, -200px);
+  font-size: 40px;
+  animation-iteration-count: infinite;
+  border-radius: 100%;
+  animation-timing-function: ease-out;
+}
+
+@keyframes rocket {
+  0% {
+    box-shadow: none;
+  }
+
+  10% {
+    transform: rotate(-44deg) translate(-139px, -200px);
+    box-shadow: -15px 15px 4px 5px orange;
+  }
+
+  85% {
+    box-shadow: -1px 1px 1px orange;
+  }
+
+  96% {
+    box-shadow: none;
+  }
+
+  100% {
+    transform: rotate(-44deg) translate(146px, -500px);
+  }
+}
+
+@media (max-width: 768px) {
+  .rocketAnimation {
+    animation: none;
+  }
+}
