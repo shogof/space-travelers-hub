@@ -6,15 +6,22 @@ function MyProfile() {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
 
   return (
-    <div>
-      <h1>My Rockets</h1>
+    <div className="border-purple-500 border-2 w-2/4 mx-auto p-8 h-auto ">
+      <h1 className="text-4xl mb-8 text-center">My Rockets</h1>
       <ul>
         {reservedRockets.length > 0 ? (
           reservedRockets.map((rocket) => (
-            <li key={rocket.id}>{rocket.name}</li>
+            <li
+              key={rocket.id}
+              className=" border-fuchsia-500 border-2 w-4/5 mx-auto p-3 my-6"
+            >
+              {rocket.name}
+            </li>
           ))
         ) : (
-          <li>No reserved rockets</li>
+          <li className="text-3xl text-center font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+            No reserved rockets
+          </li>
         )}
       </ul>
     </div>
