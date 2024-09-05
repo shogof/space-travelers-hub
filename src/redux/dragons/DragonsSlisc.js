@@ -66,5 +66,3 @@ const DragonsSlice = createSlice({
 
 export default DragonsSlice.reducer;
 export const { reserveDragon, cancelBooking } = DragonsSlice.actions;
-
-"DragonsSlice.js"

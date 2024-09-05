@@ -5,8 +5,8 @@ import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlice';
 function DragonsPart({
   id, name, image, description, reserved, count,
 }) {
-  const dispatch = useDispatch();
-  const prefixedId = dragon-${id};
+  const dispatch = 'useDispatch'();
+  const prefixedId = 'dragon-$'{id};
 
   const handleReservation = () => {
     if (reserved) {

@@ -50,4 +50,3 @@ function Dragons() {
 }
 
 export default Dragons;
-"index.jsx
