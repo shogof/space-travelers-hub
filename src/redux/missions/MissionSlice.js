@@ -6,7 +6,7 @@ const initialState = {
   reservedMissions: [],
   status: 'idle',
   error: null,
-}
+};
 
 export const fetchMissionsData = createAsyncThunk('missions/getData', async (_, { getState }) => {
   const { missions } = getState().missions;
