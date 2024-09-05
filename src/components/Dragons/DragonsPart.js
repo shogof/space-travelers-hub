@@ -90,4 +90,3 @@ DragonsPart.defaultProps = {
 
 export default DragonsPart;
 
-"DragonsPart.js"
