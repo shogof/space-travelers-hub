@@ -22,35 +22,63 @@ function Missions() {
   };
 
   return (
-    <div className="flex flex-col border-2 m-10 ">
-      <div className="missions-table-row head">
-        <div className="missions-table-cell mission-name">Mission</div>
-        <div className="missions-table-cell description">Description</div>
-        <div className="missions-table-cell status">Status</div>
-        <div className="missions-button-cell" />
+    <div className="hidden md:block">
+      <div className="grid grid-cols-12 border border-black auto-cols-min font-bold text-xl">
+        <div className="p-2 border-r-black col-span-2 border-r">Mission</div>
+        <div className="p-2 border-r-black col-span-6 border-r">
+          Description
+        </div>
+        <div className="p-2 border-r-black col-span-2 border-r">
+          Status
+        </div>
+        <div className="p-2 col-span-2">Actions</div>
       </div>
-      {missions.map((mission) => (
-        <div key={mission.id} className="missions-table-row">
-          <div className="missions-table-cell mission-name">
+
+      {missions.map((mission, index) => (
+        <div
+          key={mission.id}
+          className={`hidden md:grid grid-cols-12 border border-t-0 border-black text-white ${
+            index % 2 === 0 ? 'bg-purple-400' : ''
+          }`}
+        >
+          <div className="border-r border-r-black p-2 text-xl text-white font-bold col-span-2">
             {mission.mission_name}
           </div>
-          <div className="missions-table-cell description">
+          <div className="border-r border-r-black p-2 col-span-6 text-white">
             {mission.description}
           </div>
-          <div className="missions-table-cell status">
+          <div className="border-r border-r-black p-2 col-span-2 grid place-content-center">
             {reservedMissions.includes(mission.id) ? (
-              <span className="acmembership">Active member</span>
+              <span
+                className={`border rounded-md px-2 py-1 text-white ${
+                  reservedMissions.includes(mission.id)
+                    ? 'bg-cyan-600'
+                    : 'bg-neutral-600 uppercase'
+                }`}
+              >
+                Active member
+              </span>
             ) : (
-              <span className="membership">Not a member</span>
+              <span className="border rounded-md px-2 py-1 text-white bg-neutral-600 uppercase">
+                Not a member
+              </span>
             )}
           </div>
-          <div className="missions-table-cell button">
+          <div className="grid p-2 col-span-2 place-content-center">
             {reservedMissions.includes(mission.id) ? (
-              <button onClick={() => handleLeaveMission(mission.id)} className="leave-button" type="submit">
+              <button
+                onClick={() => handleLeaveMission(mission.id)}
+                className="text-red-500 border-red-500 border rounded-md px-2 py-1"
+                type="submit"
+              >
                 Leave Mission
               </button>
             ) : (
-              <button onClick={() => handleJoinMission(mission.id)} className="join-button" type="submit">
+              <button
+                onClick={() => handleJoinMission(mission.id)}
+                className="grid p-2 col-span-2 place-content-center"
+                type="submit"
+              >
                 Join Mission
               </button>
             )}
