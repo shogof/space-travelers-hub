@@ -27,25 +27,27 @@ function RocketsItem({
   };
 
   return (
-    <div>
-      <div>
-        <img alt={name} src={image} />
+    <div className={count % 2 === 0 ? 'flex flex-col h-auto items-center sm:flex-row w-5/6 mx-auto my-0 mt-8 flex-wrap sm:h-screen' : 'flex h-auto items-center w-5/6 mx-auto my-0 mt-8 flex-wrap flex-row-reverse pl-10 sm:h-screen sm:pl-0'}>
+      <div className="w-full h-auto sm:w-3/5 sm:h-4/5">
+        <img className="mx-auto my-0 w-full sm:w-4/5 p-2.5 sm:p-0 block rounded-3xl sm:h-3/4 min-w-28 sm:text-justify transition-transform duration-300 ease-in-out transform hover:scale-105" alt={name} src={image} />
       </div>
-      <div>
-        <h2>{name}</h2>
-        <span>
+      <div className="w-full p-2.5 text-center sm:text-justify sm:w-2/5 sm:h-4/5 flex flex-col justify-start items-center sm:px-3 sm:py-0">
+
+        <h2 className="mb-12 text-white text-3xl uppercase font-bold font-sans">{name}</h2>
+        <span className={reserved ? 'font-mono w-28 p-2 rounded-md mb-4 text-center -top-2 bg-purple-600 relative' : 'hidden'}>
           {reserved ? 'Reserved' : 'Available'}
         </span>
-        <p>{description}</p>
+        <p className="mb-5 text-lg sm:mb-10 sm:text-xl text-justify font-sans">{description}</p>
         <button
           type="button"
+          className={reserved ? 'w-full sm:w-52 bg-transparent rounded-md text-lg border-2 border-solid border-violet-600 box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); transition-all duration-300 hover:border-fuchsia-500 py-3' : 'w-full text-lg sm:w-44 bg-purple-600 border-0 rounded-md h-12 shadow-lg shadow-fuchsia-900 font-mono sm:text-xl cursor-pointer font-medium active:translate-x-px active:translate-y-px transition-all duration-300 hover:bg-fuchsia-500 hover:shadow-purple-800 hover:text-white overflow-hidden'}
           onClick={handleReservation}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
         <span className={`rocketAnimation ${prefixedId}`} />
       </div>
-      <hr />
+      <hr className="h-0.5 text-white w-5/6 mx-auto my-0" />
     </div>
   );
 }
