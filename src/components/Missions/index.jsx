@@ -22,22 +22,22 @@ function Missions() {
   };
 
   return (
-    <div className="hidden md:block">
+    <div>
       <div className="grid grid-cols-12 border border-black auto-cols-min font-bold text-xl">
-        <div className="p-2 border-r-black col-span-2 border-r">Mission</div>
-        <div className="p-2 border-r-black col-span-6 border-r">
+        <div className="p-2 border-r-black col-span-2 border-r text-3xl">Mission</div>
+        <div className="hidden md:block p-2 border-r-black col-span-6 border-r">
           Description
         </div>
-        <div className="p-2 border-r-black col-span-2 border-r">
+        <div className="hidden md:block p-2 border-r-black col-span-2 border-r">
           Status
         </div>
-        <div className="p-2 col-span-2">Actions</div>
+        <div className="hidden md:block p-2 col-span-2">Actions</div>
       </div>
 
       {missions.map((mission, index) => (
         <div
           key={mission.id}
-          className={`hidden md:grid grid-cols-12 border border-t-0 border-black text-white ${
+          className={`md:grid grid-cols-12 border border-t-0 border-black text-white ${
             index % 2 === 0 ? 'bg-purple-400' : ''
           }`}
         >
@@ -51,8 +51,10 @@ function Missions() {
             {reservedMissions.includes(mission.id) ? (
               <span
                 className={`border rounded-md px-2 py-1 text-white ${
+                  index % 2 === 0 ? 'bg-purple-400' : ''
+                }${
                   reservedMissions.includes(mission.id)
-                    ? 'bg-cyan-600'
+                    ? 'bg-fuchsia-500'
                     : 'bg-neutral-600 uppercase'
                 }`}
               >
@@ -68,7 +70,7 @@ function Missions() {
             {reservedMissions.includes(mission.id) ? (
               <button
                 onClick={() => handleLeaveMission(mission.id)}
-                className="text-red-500 border-red-500 border rounded-md px-2 py-1"
+                className="text-gray-100 border-fuchsia-500 border-2 rounded-md px-3 py-2"
                 type="submit"
               >
                 Leave Mission
