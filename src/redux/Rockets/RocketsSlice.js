@@ -24,20 +24,16 @@ const RocketsSlice = createSlice({
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
-      state.rockets = state.rockets.map((item) => {
-        if (item.id === action.payload) {
-          return { ...item, reserved: true };
-        }
-        return item;
-      });
+      const rocket = state.rockets.find((item) => item.id === action.payload);
+      if (rocket) {
+        rocket.reserved = true;
+      }
     },
     cancelBooking: (state, action) => {
-      state.rockets = state.rockets.map((item) => {
-        if (item.id === action.payload) {
-          return { ...item, reserved: false };
-        }
-        return item;
-      });
+      const rocket = state.rockets.find((item) => item.id === action.payload);
+      if (rocket) {
+        rocket.reserved = false;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -47,13 +43,16 @@ const RocketsSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
-        const rockets = action.payload.map((rocket) => ({
-          id: rocket.id,
-          name: rocket.name,
-          image: rocket.flickr_images[0],
-          description: rocket.description,
-          reserved: false,
-        }));
+        const rockets = action.payload.map((rocket) => {
+          const existingRocket = state.rockets.find((item) => item.id === rocket.id);
+          return {
+            id: rocket.id,
+            name: rocket.name,
+            image: rocket.flickr_images[0],
+            description: rocket.description,
+            reserved: existingRocket ? existingRocket.reserved : false,
+          };
+        });
         state.rockets = rockets;
         state.isLoading = false;
       })
