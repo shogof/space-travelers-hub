@@ -3,8 +3,8 @@ import Navbar from './components/Navbar/Navbar';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/Profile';
-import Dragon from './components/Dragons';
 import './styles/App.css';
+import Dragon from './components/Dragons';
 
 
 function App() {
