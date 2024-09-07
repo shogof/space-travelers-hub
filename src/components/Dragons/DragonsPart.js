@@ -5,20 +5,20 @@ import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlice';
 function DragonsPart({
   id, name, image, description, reserved, count,
 }) {
-  const dispatch = 'useDispatch'();
-  const prefixedId = 'dragon-$'{id};
+  const dispatch = useDispatch();
+  const prefixedId = 'dragon-$'{id}; 
 
   const handleReservation = () => {
-    if (reserved) {
+    if '(reserved)' {
       dispatch(cancelBooking(id));
-      const animation = document.querySelector(.${prefixedId});
+      const animation = document.querySelector('.${prefixedId}'); 
       if (animation) {
         animation.textContent = '';
         animation.classList.remove('dragonAnimation');
       }
     } else {
       dispatch(reserveDragon(id));
-      const animation = document.querySelector(.${prefixedId});
+      const animation = document.querySelector(.${prefixedId}); 
       if (animation) {
         animation.textContent = '🔥';
         animation.classList.add('dragonAnimation');
@@ -61,14 +61,14 @@ function DragonsPart({
           type="button"
           className={
             reserved
-              ? 'w-full sm:w-52 bg-transparent rounded-md text-lg border-2 border-solid border-violet-600 box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); transition-all duration-300 hover:border-fuchsia-500 py-3'
+              ? 'w-full sm:w-52 bg-transparent rounded-md text-lg border-2 border-solid border-violet-600 shadow-md transition-all duration-300 hover:border-fuchsia-500 py-3'
               : 'w-full text-lg sm:w-44 bg-purple-600 border-0 rounded-md h-12 shadow-lg shadow-fuchsia-900 font-mono sm:text-xl cursor-pointer font-medium active:translate-x-px active:translate-y-px transition-all duration-300 hover:bg-fuchsia-500 hover:shadow-purple-800 hover:text-white overflow-hidden'
           }
           onClick={handleReservation}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
         </button>
-        <span className={dragonAnimation ${prefixedId}} />
+        <span className={dragonAnimation ${prefixedId}} /> {/* استفاده از backticks */}
       </div>
       <hr className="h-0.5 text-white w-5/6 mx-auto my-0" />
     </div>
@@ -89,4 +89,3 @@ DragonsPart.defaultProps = {
 };
 
 export default DragonsPart;
-

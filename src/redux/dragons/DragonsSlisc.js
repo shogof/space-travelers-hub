@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlice';
+import { reserveDragon, cancelBooking } from './DragonsSlice';
 
 function DragonsPart({
   id, name, image, description, reserved, count,

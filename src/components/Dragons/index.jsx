@@ -1,7 +1,8 @@
+
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Dragon from './DragonsPart';
-import { fetchDragons } from '../../redux/Dragons/DragonsSlice';
+import { fetchDragons } from '../../redux/Dragons/DragonsSlice.js';
 
 function Dragons() {
   const dispatch = useDispatch();

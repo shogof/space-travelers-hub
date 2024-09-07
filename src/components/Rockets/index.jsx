@@ -39,7 +39,7 @@ function Dragons() {
           key={item.id}
           id={item.id}
           name={item.name}
-          image={item.image || 'path/to/default-image.jpg'} // Provide default image
+          image={item.image || 'path/to/default-image.jpg'} 
           description={item.description}
           reserved={item.reserved}
           count={index}

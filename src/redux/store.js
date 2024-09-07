@@ -1,17 +1,10 @@
-import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import missionsSlice from './missions/missionsSlice';
-import rocketsReducer from './Rockets/RocketsSlice';
-import dragonsReducer from './Dragons/DragonsSlice.js';
-
-const rootReducer = combineReducers({
-  missions: missionsSlice,
-  rockets: rocketsReducer,
-  dragons: dragonsReducer,
-});
+import dragonsReducer from './Dragons/DragonsSlice'; // Correct the file name
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    dragons: dragonsReducer,
+  },
 });
 
 export default store;
