@@ -6,7 +6,6 @@ import MyProfile from './components/Profile';
 import './styles/App.css';
 import Dragon from './components/Dragons';
 
-
 function App() {
   return (
     <div>
@@ -16,6 +15,7 @@ function App() {
         <Route path="/missions" element={<Missions />} />
         <Route path="/dragon" element={<Dragon />} />
         <Route path="/myprofile" element={<MyProfile />} />
+        {/* <Route path="*" element={<NotMatch />} /> */}
       </Routes>
     </div>
   );

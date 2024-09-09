@@ -11,8 +11,6 @@ function MyProfile() {
   return (
     <div className="border-purple-500 border-2 w-2/4 mx-auto p-8 h-auto">
       <h1 className="text-4xl mb-8 text-center">My Profile</h1>
-      
-      {/* Rockets Section */}
       <div className="mb-8">
         <h2 className="text-3xl mb-4 text-center">My Rockets</h2>
         <ul>
@@ -32,8 +30,6 @@ function MyProfile() {
           )}
         </ul>
       </div>
-
-      {/* Missions Section */}
       <div>
         <h2 className="text-3xl mb-4 text-center">My Missions</h2>
         <ul>
