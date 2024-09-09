@@ -16,7 +16,6 @@ function App() {
         <Route path="/missions" element={<Missions />} />
         <Route path="/dragon" element={<Dragon />} />
         <Route path="/myprofile" element={<MyProfile />} />
-        {/* <Route path="*" element={<NotMatch />} /> */}
       </Routes>
     </div>
   );
