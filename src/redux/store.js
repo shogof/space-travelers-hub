@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import missionsSlice from './missions/missionsSlice';
-import DragonsSlice from './dragons/DragonsSlisc'; // Import DragonsSlice
+import DragonsSlice from './Dragons/DragonsSlisc'; 
 
 const rootReducer = combineReducers({
   missions: missionsSlice.reducer,
-  dragons: DragonsSlice, // Replace rockets with dragons
+  dragons: DragonsSlice, 
 });
 
 const store = configureStore({

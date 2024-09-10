@@ -1,30 +1,30 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon, cancelBooking } from '../../redux/dragons/DragonsSlisc';
+import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlisc';
 
 function DragonsItem({
-  id, name, image, description, reserved, count,
-}) {
-  const dispatch = useDispatch();
-  const prefixedId = dragon-${id};
-
-  const handleReservation = () => {
-    if (reserved) {
-      dispatch(cancelBooking(id));
-      const animation = document.querySelector(.${prefixedId});
-      if (animation) {
-        animation.textContent = '';
-        animation.classList.remove('dragonAnimation');
+    id, name, image, description, reserved, count,
+  }) {
+    const dispatch = useDispatch();
+    const prefixedId ="dragon-"+id;
+  
+    const handleReservation = () => {
+      if (reserved) {
+        dispatch(cancelBooking(id));
+        const animation = document.querySelector(`.${prefixedId}`);
+        if (animation) {
+          animation.textContent = '';
+          animation.classList.remove('dragonAnimation');
+        }
+      } else {
+        dispatch(reserveDragon(id));
+        const animation = document.querySelector(`.${prefixedId}`);
+        if (animation) {
+          animation.textContent = '🐉';
+          animation.classList.add('dragonAnimation');
+        }
       }
-    } else {
-      dispatch(reserveDragon(id));
-      const animation = document.querySelector(.${prefixedId});
-      if (animation) {
-        animation.textContent = '🐉';
-        animation.classList.add('dragonAnimation');
-      }
-    }
-  };
+    };
 
   return (
     <div className={count % 2 === 0 ? 'flex flex-col h-auto items-center sm:flex-row w-5/6 mx-auto my-0 mt-8 flex-wrap sm:h-screen' : 'flex h-auto items-center w-5/6 mx-auto my-0 mt-8 flex-wrap flex-row-reverse pl-10 sm:h-screen sm:pl-0'}>
@@ -45,7 +45,7 @@ function DragonsItem({
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
         </button>
-        <span className={dragonAnimation ${prefixedId}} />
+        <span className={`dragonAnimation ${prefixedId}`} />
       </div>
       <hr className="h-0.5 text-white w-5/6 mx-auto my-0" />
     </div>
@@ -66,4 +66,3 @@ DragonsItem.defaultProps = {
 };
 
 export default DragonsItem;
-file item
