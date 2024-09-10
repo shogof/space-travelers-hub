@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlice';
+import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlisc';
 
 function DragonsPart({
   id, name, image, description, reserved, count,
 }) {
   const dispatch = useDispatch();
-  const prefixedId = 'dragon-$'{id}; 
+  const prefixedId = 'dragon-${id}'; // Fixed interpolation with backticks
 
   const handleReservation = () => {
-    if '(reserved)' {
+    if (reserved) {
       dispatch(cancelBooking(id));
-      const animation = document.querySelector('.${prefixedId}'); 
+      const animation = document.querySelector('.${prefixedId}'); // Fixed interpolation and querySelector syntax
       if (animation) {
         animation.textContent = '';
         animation.classList.remove('dragonAnimation');
       }
     } else {
       dispatch(reserveDragon(id));
-      const animation = document.querySelector(.${prefixedId}); 
+      const animation = document.querySelector('.${prefixedId}'); // Fixed interpolation and querySelector syntax
       if (animation) {
         animation.textContent = '🔥';
         animation.classList.add('dragonAnimation');
@@ -68,7 +68,7 @@ function DragonsPart({
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
         </button>
-        <span className={dragonAnimation ${prefixedId}} /> {/* استفاده از backticks */}
+        <span className={'dragonAnimation ${prefixedId}'} /> {/* Fixed className syntax */}
       </div>
       <hr className="h-0.5 text-white w-5/6 mx-auto my-0" />
     </div>

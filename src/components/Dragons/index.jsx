@@ -1,16 +1,11 @@
-
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Dragon from './DragonsPart';
-import { fetchDragons } from '../../redux/Dragons/DragonsSlice.js';
+import Dragon from './DragonsItem';
+import { fetchDragons } from '../../redux/dragons/DragonsSlisc';
 
 function Dragons() {
   const dispatch = useDispatch();
-  const {
-    dragons = [],
-    isLoading,
-    error,
-  } = useSelector((store) => store.dragons || {});
+  const { dragons, isLoading, error } = useSelector((store) => store.dragons);
 
   useEffect(() => {
     dispatch(fetchDragons());
@@ -33,7 +28,7 @@ function Dragons() {
           key={item.id}
           id={item.id}
           name={item.name}
-          image={item.image || 'path/to/default-image.jpg'} // Provide default image
+          image={item.image}
           description={item.description}
           reserved={item.reserved}
           count={index}

@@ -6,19 +6,19 @@ function DragonsPart({
   id, name, image, description, reserved, count,
 }) {
   const dispatch = useDispatch();
-  const prefixedId = dragon-${id};
+  const prefixedId = 'dragon-${id}';
 
   const handleReservation = () => {
     if (reserved) {
       dispatch(cancelBooking(id));
-      const animation = document.querySelector(.${prefixedId});
+      const animation = document.querySelector('.${prefixedId}');
       if (animation) {
         animation.textContent = '';
         animation.classList.remove('dragonAnimation');
       }
     } else {
       dispatch(reserveDragon(id));
-      const animation = document.querySelector(.${prefixedId});
+      const animation = document.querySelector('.${prefixedId}');
       if (animation) {
         animation.textContent = '🔥';
         animation.classList.add('dragonAnimation');
@@ -68,7 +68,7 @@ function DragonsPart({
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
         </button>
-        <span className={dragonAnimation ${prefixedId}} />
+        <span className={'dragonAnimation ${prefixedId}'} />
       </div>
       <hr className="h-0.5 text-white w-5/6 mx-auto my-0" />
     </div>
