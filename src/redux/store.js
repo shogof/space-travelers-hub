@@ -1,19 +1,18 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import RocketsSlice from './Rockets/RocketsSlice';
-import missionsReducer from './missions/MissionSlice';
+import missionsSlice from './missions/MissionSlice';
+import rocketsSlice from './Rockets/RocketsSlice';
 
-// Combine reducers if you have multiple slices
 const rootReducer = combineReducers({
-  rockets: RocketsSlice,
-  missions: missionsReducer,
+  missions: missionsSlice.reducer,
+  rockets: rocketsSlice.reducer,
 });
 
 const store = configureStore({
-  reducer: rootReducer, // Use rootReducer to combine reducers
+  reducer: rootReducer,
 });
 
 const setupStore = (preloadedState) => configureStore({
-  reducer: rootReducer, // Ensure consistency with rootReducer
+  reducer: rootReducer,
   preloadedState,
 });
 
