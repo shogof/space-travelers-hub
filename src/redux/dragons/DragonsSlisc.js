@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Fetch dragons data from an API
 export const fetchDragons = createAsyncThunk(
   'dragons/fetchData',
   async () => {
@@ -52,7 +51,7 @@ const DragonsSlice = createSlice({
           return {
             id: dragon.id,
             name: dragon.name,
-            image: dragon.flickr_images[0], // Assuming there's an image
+            image: dragon.flickr_images[0],
             description: dragon.description,
             reserved: existingDragon ? existingDragon.reserved : false,
           };
