@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import missionsSlice from './missions/MissionsSlice';
+import missionsSlice from './missions/MissionSlice';
 import rocketsSlice from './Rockets/RocketsSlice';
 
 const rootReducer = combineReducers({
