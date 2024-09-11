@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveDragon, cancelBooking } from '../../redux/dragons/DragonsSlisc';
 
-function DragonsItem({ 
+function DragonsItem({
   id, name, image, description, reserved, count,
 }) {
   const dispatch = useDispatch();
