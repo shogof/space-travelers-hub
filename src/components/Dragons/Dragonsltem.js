@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon, cancelBooking } from '../../redux/Dragons/DragonsSlisc';
+import { reserveDragon, cancelBooking } from '../../redux/dragons/DragonsSlisc';
 
-function DragonsItem({ id, name, image, description, reserved, count }) {
+function DragonsItem({ 
+  id, name, image, description, reserved, count,
+}) {
   const dispatch = useDispatch();
-  const prefixedId = "dragon-" + id;
+  const prefixedId = `dragon-${id}`;
 
   const handleReservation = () => {
     if (reserved) {
       dispatch(cancelBooking(id));
       const animation = document.querySelector(`.${prefixedId}`);
       if (animation) {
-        animation.textContent = "";
-        animation.classList.remove("dragonAnimation");
+        animation.textContent = '';
+        animation.classList.remove('dragonAnimation');
       }
     } else {
       dispatch(reserveDragon(id));
       const animation = document.querySelector(`.${prefixedId}`);
       if (animation) {
-        animation.textContent = "🐉";
-        animation.classList.add("dragonAnimation");
+        animation.textContent = '🐉';
+        animation.classList.add('dragonAnimation');
       }
     }
   };
@@ -28,8 +30,8 @@ function DragonsItem({ id, name, image, description, reserved, count }) {
     <div
       className={
         count % 2 === 0
-          ? "flex flex-col h-auto items-center sm:flex-row w-5/6 mx-auto my-0 mt-8 flex-wrap sm:h-screen"
-          : "flex h-auto items-center w-5/6 mx-auto my-0 mt-8 flex-wrap flex-row-reverse pl-10 sm:h-screen sm:pl-0"
+          ? 'flex flex-col h-auto items-center sm:flex-row w-5/6 mx-auto my-0 mt-8 flex-wrap sm:h-screen'
+          : 'flex h-auto items-center w-5/6 mx-auto my-0 mt-8 flex-wrap flex-row-reverse pl-10 sm:h-screen sm:pl-0'
       }
     >
       <div className="w-full h-auto sm:w-3/5 sm:h-4/5">
@@ -46,11 +48,11 @@ function DragonsItem({ id, name, image, description, reserved, count }) {
         <span
           className={
             reserved
-              ? "font-mono w-28 p-2 rounded-md mb-4 text-center -top-2 bg-purple-600 relative"
-              : "hidden"
+              ? 'font-mono w-28 p-2 rounded-md mb-4 text-center -top-2 bg-purple-600 relative'
+              : 'hidden'
           }
         >
-          {reserved ? "Reserved" : "Available"}
+          {reserved ? 'Reserved' : 'Available'}
         </span>
         <p className="mb-5 text-lg sm:mb-10 sm:text-xl text-justify font-sans">
           {description}
@@ -59,12 +61,12 @@ function DragonsItem({ id, name, image, description, reserved, count }) {
           type="button"
           className={
             reserved
-              ? "w-full sm:w-52 bg-transparent rounded-md text-lg border-2 border-solid border-violet-600 box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); transition-all duration-300 hover:border-fuchsia-500 py-3"
-              : "w-full text-lg sm:w-44 bg-purple-600 border-0 rounded-md h-12 shadow-lg shadow-fuchsia-900 font-mono sm:text-xl cursor-pointer font-medium active:translate-x-px active:translate-y-px transition-all duration-300 hover:bg-fuchsia-500 hover:shadow-purple-800 hover:text-white overflow-hidden"
+              ? 'w-full sm:w-52 bg-transparent rounded-md text-lg border-2 border-solid border-violet-600 box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); transition-all duration-300 hover:border-fuchsia-500 py-3'
+              : 'w-full text-lg sm:w-44 bg-purple-600 border-0 rounded-md h-12 shadow-lg shadow-fuchsia-900 font-mono sm:text-xl cursor-pointer font-medium active:translate-x-px active:translate-y-px transition-all duration-300 hover:bg-fuchsia-500 hover:shadow-purple-800 hover:text-white overflow-hidden'
           }
           onClick={handleReservation}
         >
-          {reserved ? "Cancel Reservation" : "Reserve Dragon"}
+          {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
         </button>
         <span className={`dragonAnimation ${prefixedId}`} />
       </div>
