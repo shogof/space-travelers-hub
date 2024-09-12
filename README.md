@@ -142,13 +142,6 @@ We encourage contributions, issue reporting, and feature requests. Please refer 
 
 If you appreciate this project, consider giving it a ⭐ on [GitHub](https://github.com/sja-thedude/Space-Travelers-Hub).
 
-## Acknowledgments
-
-- This project is a component of the Microverse curriculum for Module 3.
-- Special thanks to the Microverse team for their excellent curriculum and support.
-- Gratitude to code reviewers for their valuable feedback.
-- Thanks to all coding partners, the morning session team, and standup team partners for their collaboration and support.
-
 ## License
 
 This project is licensed under the MIT License.
