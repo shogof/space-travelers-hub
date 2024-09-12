@@ -54,7 +54,7 @@ function DragonsItem({
         >
           {reserved ? 'Reserved' : 'Available'}
         </span>
-        <p className="mb-5 text-lg sm:mb-10 sm:text-xl text-justify font-sans">
+        <p className="mb-5 sm:mb-10 text-justify font-sans">
           {description}
         </p>
         <button
