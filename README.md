@@ -105,7 +105,7 @@ To prepare the application for production deployment:
 
 ## Live Link
 
-Experience the Space Travelers Hub live [here](https://space-travelers-hub.herokuapp.com).
+Experience the Space Travelers Hub live [here](https://space-travelers-gqabm96uu-shogofs-projects.vercel.app/).
 
 ## GIF Showcase
 
