@@ -1,4 +1,4 @@
-# Space Travelers Hub
+# 🌌 Space Travelers Hub 🚀
 
 Welcome to the Space Travelers Hub, a sophisticated web application designed to provide users with an immersive experience into SpaceX's groundbreaking technology. This platform allows users to explore and manage their interactions with SpaceX rockets, missions, and dragons, as well as track their participation through a comprehensive profile interface.
 
@@ -12,6 +12,7 @@ Welcome to the Space Travelers Hub, a sophisticated web application designed to 
 - [GIF Showcase](#gif-showcase)
 - [Authors](#authors)
 - [Contributing](#contributing)
+- [Show Your Support](#show-your-support)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
@@ -19,19 +20,19 @@ Welcome to the Space Travelers Hub, a sophisticated web application designed to 
 
 The Space Travelers Hub is designed to offer a rich user experience by integrating with SpaceX's offerings. Key functionalities include:
 
-- **Rockets**: View and manage reservations for SpaceX rockets.
-- **Missions**: Join or leave space missions, with detailed mission descriptions.
-- **Dragons**: Book or cancel reservations for SpaceX dragons.
-- **My Profile**: Access a personalized dashboard to monitor all current reservations and mission participations.
+- **🚀 Rockets**: View and manage reservations for SpaceX rockets.
+- **🛰️ Missions**: Join or leave space missions, with detailed mission descriptions.
+- **🐉 Dragons**: Book or cancel reservations for SpaceX dragons.
+- **👤 My Profile**: Access a personalized dashboard to monitor all current reservations and mission participations.
 
 This project is part of Microverse's Block 4, Module 3 curriculum, highlighting competencies in React development, state management with Redux, component-based architecture, and modern styling with Tailwind CSS. It also emphasizes code quality through the use of linters and comprehensive testing.
 
 ## Features
 
-- **Rockets**: Manage your rocket bookings with ease.
-- **Missions**: Join or exit missions, with complete details provided.
-- **Dragons**: Handle dragon reservations efficiently.
-- **My Profile**: View and manage all reservations and mission statuses in one centralized location.
+- **🚀 Rockets**:  Manage your rocket bookings with ease.
+- **🛰️ Missions**: Join or exit missions, with complete details provided.
+- **🐉 Dragons**: Handle dragon reservations efficiently.
+- **👤 My Profile**:  View and manage all reservations and mission statuses in one centralized location.
 
 ## Technologies Used
 
@@ -112,7 +113,9 @@ Here is a GIF demonstrating the key features of Space Travelers Hub:
 
 ### General Application Overview
 This GIF provides an overview of the application’s functionalities, including rocket reservations, mission participation, and dragon bookings.
-![General Overview](https://media.giphy.com/media/3o6ZsXZpG83D2zE59S/giphy.gif)
+
+
+![General Overview](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2c4Ym93bWV1c3RpNjBiem9hbHU1Mzlkanc0aDE0ZTg2a3gyYWIzNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/574JmIKxZj0qO0kTA8/giphy.gif)
 
 ## Authors
 
@@ -128,8 +131,8 @@ This GIF provides an overview of the application’s functionalities, including 
 
 - **Marwa Sadat**
   - GitHub: [@MarwaSadat](https://github.com/Marwa-Sadat)
-  - LinkedIn: [Marwa Sadat](www.linkedin.com/in/marwa-sadat-09b55930a)
-  - Email: [Email](mailto:shogofadeveloper12@gmail.com)
+  - LinkedIn: [Marwa Sadat](https://www.linkedin.com/in/marwa-sadat-09b55930a)
+  - Email: [Email](mailto:marwa.sadat@example.com)
 
 ## Contributing
 
