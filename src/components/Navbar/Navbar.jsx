@@ -48,7 +48,7 @@ function Navbar() {
                 <NavLink
                   to="/"
                   className={({ isActive }) => `navlink ${isActive ? 'active-link' : ''}`}
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu}
                 >
                   Rockets
                 </NavLink>
